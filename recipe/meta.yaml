@@ -1,5 +1,5 @@
 {% set name = "tyssue" %}
-{% set version = "0.2rc2" %}
+{% set version = "0.2rc1" %}
 {% set sha256 = "bc9124a94c9f4727a46cfe79021e80792a3ee7954fa8678728d16300912ada68"%}
 
 
