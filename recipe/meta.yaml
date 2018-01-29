@@ -29,6 +29,8 @@ requirements:
     - pytables
     - jupyter
     - notebook
+    - quantities
+    - ipyvolume
 test:
   imports:
     - tyssue
