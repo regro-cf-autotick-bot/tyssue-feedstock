@@ -18,10 +18,10 @@ build:
   skip: True  # [py2k and py35]
 requirements:
   build:
-    - python >= 3.6
+    - python >=3.6
     - setuptools
   run:
-    - python >= 3.6
+    - python >=3.6
     - numpy
     - scipy
     - matplotlib
