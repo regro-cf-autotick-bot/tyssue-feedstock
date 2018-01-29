@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "0.2rc1" %}
-{% set sha256 = "bc9124a94c9f4727a46cfe79021e80792a3ee7954fa8678728d16300912ada68"%}
+{% set version = "0.2rc2" %}
+{% set sha256 = "9fbdefbf6830bc7abceb54dae98cba46298562b1c0de7bd98896bcfbc50bc337"%}
 
 
 
@@ -13,7 +13,7 @@ source:
   url: https://github.com/DamCB/tyssue/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [py2k]
 requirements:
@@ -38,6 +38,7 @@ test:
     - tyssue.draw
     - tyssue.dynamics
     - tyssue.geometry
+    - tyssue.generation
     - tyssue.io
     - tyssue.particles
     - tyssue.solvers
