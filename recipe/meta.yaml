@@ -1,7 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "0.2rc2" %}
-{% set sha256 = "9fbdefbf6830bc7abceb54dae98cba46298562b1c0de7bd98896bcfbc50bc337"%}
-
+{% set version = "0.2" %}
+{% set sha256 = "b1c4c128a697292921a0b6dfe58f0c76a4f5dd03faf4a313888c14f2845b0ef4"%}
 
 
 package:
@@ -13,7 +12,7 @@ source:
   url: https://github.com/DamCB/tyssue/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 build:
-  number: 3
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [py2k or py35]
 requirements:
