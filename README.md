@@ -16,14 +16,16 @@ in 2D and 3D for python 3.6+
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/tyssue-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/tyssue-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/tyssue-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/tyssue-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/tyssue-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/tyssue-feedstock/branch/master)
+![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
+![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tyssue/badges/version.svg)](https://anaconda.org/conda-forge/tyssue)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tyssue/badges/downloads.svg)](https://anaconda.org/conda-forge/tyssue)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-tyssue-green.svg)](https://anaconda.org/conda-forge/tyssue) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tyssue.svg)](https://anaconda.org/conda-forge/tyssue) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tyssue.svg)](https://anaconda.org/conda-forge/tyssue) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tyssue.svg)](https://anaconda.org/conda-forge/tyssue) |
 
 Installing tyssue
 =================
