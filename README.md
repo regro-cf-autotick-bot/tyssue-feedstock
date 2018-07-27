@@ -16,8 +16,8 @@ in 2D and 3D for python 3.6+
 Current build status
 ====================
 
-![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
-![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/tyssue-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/tyssue-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/tyssue-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/tyssue-feedstock)
 ![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
