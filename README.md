@@ -5,7 +5,7 @@ About tyssue
 
 Home: https://github.com/DamCB/tyssue
 
-Package license: MPLv2.0
+Package license: GPLv3.0
 
 Feedstock license: BSD 3-Clause
 

@@ -1,25 +1,46 @@
 {% set name = "tyssue" %}
-{% set version = "0.2.3" %}
-{% set sha256 = "0c3068ec257ce2018e24f26e4fc4b810a02fcf819857edbdb19e855547e4a203" %}
-
+{% set version = "0.3.rc5" %}
+{% set sha256 = "b7bc830cf897767d3a7385fd50d417482f288d53fdf3af29932ab7936c91e1ed" %}
+{% set cgal_version = "4.13" %}
+{% set cgal_sha256 = "c4912a00e99f29ee37cac1d780d115a048743370b9329a2cca839ffb392f3516" %}
+{% set pb11_version = "2.2.4" %}
+{% set pb11_sha256 = "b69e83658513215b8d1443544d0549b7d231b9f201f6fc787a2b2218b408181e" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/DamCB/tyssue/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  - fn: {{ name }}-{{ version }}.tar.gz
+    url: https://github.com/DamCB/tyssue/archive/{{ version }}.tar.gz
+    sha256: {{ sha256 }}
+  - fn: pybind11-{{ pb11_version }}.tar.gz
+    url: https://github.com/pybind/pybind11/archive/v{{ pb11_version }}.tar.gz
+    folder: pybind11
+    sha256: {{ pb11_sha256 }}
+  - url: https://github.com/CGAL/cgal/archive/releases/CGAL-{{ cgal_version }}.tar.gz
+    folder: CGAL
+    sha256: {{ cgal_sha256 }}
+
+
 build:
-  number: 1002
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
   skip: True  # [py2k or py35]
 requirements:
+  build:
+    - cmake
+    - eigen
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - boost-cpp 1.68
+    - mpfr
   host:
     - python
     - setuptools
+    - pip
   run:
+    - boost-cpp 1.68
+    - mpfr
     - python
     - numpy
     - scipy
@@ -36,6 +57,7 @@ test:
     - tyssue.behaviors
     - tyssue.config
     - tyssue.core
+    - tyssue.collisions
     - tyssue.draw
     - tyssue.dynamics
     - tyssue.geometry
@@ -49,7 +71,7 @@ test:
 
 about:
   home: https://github.com/DamCB/tyssue
-  license: MPLv2.0
+  license: GPLv3.0
   license_file: LICENSE
   summary: 'A tissue simulation library'
   description: |
