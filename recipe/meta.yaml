@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "0.3.0" %}
-{% set sha256 = "fa30cb32ea32ebe5ebf27c9dc9728730cff224fca23242eb95edaf83727ef000" %}
+{% set version = "0.3.2" %}
+{% set sha256 = "288fbc0d97cfc49e51b50808d6ec0a1e131385e1b16f0af0d3fe18ca1eee029c" %}
 {% set cgal_version = "4.13" %}
 {% set cgal_sha256 = "c4912a00e99f29ee37cac1d780d115a048743370b9329a2cca839ffb392f3516" %}
 {% set pb11_version = "2.2.4" %}
@@ -14,17 +14,17 @@ source:
   - fn: {{ name }}-{{ version }}.tar.gz
     url: https://github.com/DamCB/tyssue/archive/{{ version }}.tar.gz
     sha256: {{ sha256 }}
-  - fn: pybind11-{{ pb11_version }}.tar.gz
+  - fn: pybind11-4.13.tar.gz
     url: https://github.com/pybind/pybind11/archive/v{{ pb11_version }}.tar.gz
     folder: pybind11
-    sha256: {{ pb11_sha256 }}
-  - url: https://github.com/CGAL/cgal/archive/releases/CGAL-{{ cgal_version }}.tar.gz
+    sha256: "b69e83658513215b8d1443544d0549b7d231b9f201f6fc787a2b2218b408181e"
+  - url: https://github.com/CGAL/cgal/archive/releases/CGAL-4.13.tar.gz
     folder: CGAL
-    sha256: {{ cgal_sha256 }}
+    sha256: "c4912a00e99f29ee37cac1d780d115a048743370b9329a2cca839ffb392f3516"
 
 
 build:
-  number: 0
+  number: 2
   skip: True  # [py2k or py35]
 requirements:
   build:
