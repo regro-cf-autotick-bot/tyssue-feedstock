@@ -1,10 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "0.3.2" %}
-{% set sha256 = "288fbc0d97cfc49e51b50808d6ec0a1e131385e1b16f0af0d3fe18ca1eee029c" %}
-{% set cgal_version = "4.13" %}
-{% set cgal_sha256 = "c4912a00e99f29ee37cac1d780d115a048743370b9329a2cca839ffb392f3516" %}
-{% set pb11_version = "2.2.4" %}
-{% set pb11_sha256 = "b69e83658513215b8d1443544d0549b7d231b9f201f6fc787a2b2218b408181e" %}
+{% set version = "0.3.3rc1" %}
+{% set sha256 = "c0cba7b6e1fdc0083ebf8bb3bcc8f8e7e4db1138c706d2cbddc72415dd455f59" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +20,7 @@ source:
 
 
 build:
-  number: 2
+  number: 0
   skip: True  # [py2k or py35]
 requirements:
   build:
@@ -32,14 +28,14 @@ requirements:
     - eigen
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - boost-cpp 1.68
+    - boost-cpp
     - mpfr
   host:
     - python
     - setuptools
     - pip
   run:
-    - boost-cpp 1.68
+    - boost-cpp
     - mpfr
     - python
     - numpy
