@@ -28,14 +28,14 @@ requirements:
     - eigen
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - boost-cpp
+    - boost-cpp 1.68
     - mpfr
   host:
     - python
     - setuptools
     - pip
   run:
-    - boost-cpp
+    - boost-cpp 1.68
     - mpfr
     - python
     - numpy
