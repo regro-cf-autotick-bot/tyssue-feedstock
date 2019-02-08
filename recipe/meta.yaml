@@ -11,7 +11,7 @@ source:
     url: https://github.com/DamCB/tyssue/archive/{{ version }}.tar.gz
     sha256: {{ sha256 }}
   - fn: pybind11-4.13.tar.gz
-    url: https://github.com/pybind/pybind11/archive/v{{ pb11_version }}.tar.gz
+    url: https://github.com/pybind/pybind11/archive/v4.13.tar.gz
     folder: pybind11
     sha256: "b69e83658513215b8d1443544d0549b7d231b9f201f6fc787a2b2218b408181e"
   - url: https://github.com/CGAL/cgal/archive/releases/CGAL-4.13.tar.gz
