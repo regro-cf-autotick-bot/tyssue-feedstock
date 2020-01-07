@@ -19,7 +19,7 @@ source:
     sha256: 66853a040703f8dccabba25d44c004cdcb9ea0ffff28c33b89fbfa319d795e31
 
 build:
-  number: 1
+  number: 2
   skip: True  # [py2k or py35]
 
 requirements:
