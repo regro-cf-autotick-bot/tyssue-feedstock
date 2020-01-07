@@ -14,9 +14,9 @@ source:
     url: https://github.com/pybind/pybind11/archive/v2.4.3.tar.gz
     folder: pybind11
     sha256: 1eed57bc6863190e35637290f97a20c81cfe4d9090ac0a24f3bbf08f265eb71d
-  - url: https://github.com/CGAL/cgal/releases/download/releases%2FCGAL-5.0/CGAL-5.0-library.tar.xz
+  - url: https://github.com/CGAL/cgal/releases/download/releases%2FCGAL-5.0/CGAL-5.0.zip
     folder: CGAL
-    sha256: 66853a040703f8dccabba25d44c004cdcb9ea0ffff28c33b89fbfa319d795e31
+    sha256: https://github.com/CGAL/cgal/releases/download/releases%2FCGAL-5.0/
 
 build:
   number: 2
