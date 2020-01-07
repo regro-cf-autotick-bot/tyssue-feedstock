@@ -4,7 +4,6 @@ cd CGAL
 mkdir build && cd build
 
 set CMAKE_CONFIG="Release"
-set CMAKE_GENERATOR="NMake Makefiles"
 
 cmake -LAH                                    ^
   -DCMAKE_BUILD_TYPE="%CMAKE_CONFIG%"         ^
