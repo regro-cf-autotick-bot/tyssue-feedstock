@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "0.6.2" %}
-{% set sha256 = "0ee4e17ca2624ad4252a9bdd81f7e1a5ca774c807381a46ccc940c4da7e466e7" %}
+{% set version = "0.6.3" %}
+{% set sha256 = "45b4f42d6ff0da0b376170d0368e363a39cca3efa8cbcc7deb01cbe12d38a342" %}
 
 package:
   name: {{ name|lower }}
@@ -19,7 +19,7 @@ source:
     sha256: bd9327be903ab7ee379a8a7a0609eba0962f5078d2497cf8e13e8e1598584154
 
 build:
-  number: 2
+  number: 0
   skip: True  # [py2k or py35]
 
 requirements:
