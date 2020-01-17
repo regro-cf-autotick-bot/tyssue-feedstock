@@ -1,3 +1,4 @@
+setlocal EnableDelayedExpansion
 
 cd CGAL
 
