@@ -13,7 +13,11 @@ cmake -LAH -G %CMAKE_GENERATOR%               ^
   -DWITH_CGAL_ImageIO=OFF -DWITH_CGAL_Qt5=OFF ^
   ..
 if errorlevel 1 exit 1
-cmake --build . --config %CMAKE_CONFIG% --target INSTALL
+
+nmake .
+if errorlevel 1 exit 1
+
+nmake install
 if errorlevel 1 exit 1
 
 cd ..\..
