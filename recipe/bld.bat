@@ -15,10 +15,9 @@ cmake -LAH -G %CMAKE_GENERATOR%               ^
   ..
 if errorlevel 1 exit 1
 
-nmake .
-if errorlevel 1 exit 1
 
-nmake install
+
+cmake --build . --config %CMAKE_CONFIG% --target INSTALL || goto :eof
 if errorlevel 1 exit 1
 
 cd ..\..
