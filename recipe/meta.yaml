@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
 {% set version = "0.6.7" %}
-{% set sha256 = "bd9327be903ab7ee379a8a7a0609eba0962f5078d2497cf8e13e8e1598584154" %}
+{% set sha256 = "a2dd1a494ba4a63f8e47107d6fa3d1dea01d8413b37ee2523b5b5462b2210fc0" %}
 
 package:
   name: {{ name|lower }}
@@ -16,8 +16,7 @@ source:
     sha256: 1eed57bc6863190e35637290f97a20c81cfe4d9090ac0a24f3bbf08f265eb71d
   - url: https://github.com/CGAL/cgal/releases/download/releases%2FCGAL-5.0/CGAL-5.0.zip
     folder: CGAL
-    sha256: 1eed57bc6863190e35637290f97a20c81cfe4d9090ac0a24f3bbf08f265eb71d
-
+    sha256: bd9327be903ab7ee379a8a7a0609eba0962f5078d2497cf8e13e8e1598584154
 build:
   number: 0
   skip: true  # [py2k or py35]
