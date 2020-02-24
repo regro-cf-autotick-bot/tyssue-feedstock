@@ -20,7 +20,7 @@ source:
 build:
   number: 0
   skip: true  # [py2k or py35]
-  skip: true # [win and vc<14]
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
