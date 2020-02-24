@@ -18,7 +18,7 @@ source:
     folder: CGAL
     sha256: bd9327be903ab7ee379a8a7a0609eba0962f5078d2497cf8e13e8e1598584154
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k or py35]
   skip: true # [win and vc<14]
 
