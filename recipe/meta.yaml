@@ -1,5 +1,5 @@
 {% set name = "tyssue" %}
-{% set version = "0.7.0-pre" %}
+{% set version = "0.7.0.pre" %}
 {% set sha256 = "c8eff8bc17d2b8dd892b4c767c304b8b791ef47db776a431ca7d58f9d9cfdb77" %}
 
 package:
