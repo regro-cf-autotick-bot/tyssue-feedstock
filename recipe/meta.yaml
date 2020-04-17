@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "0.7.0.pre" %}
-{% set sha256 = "363de3620abb61db7c4999ee8908a62fff8c42319a4dadb02415c7cc499c0805" %}
+{% set version = "0.7.0" %}
+{% set sha256 = "78afecb875abdde9f8fb4b499d6eb0433c852509bb5559c17bdc32abd4207ce9" %}
 
 package:
   name: {{ name|lower }}
@@ -69,7 +69,7 @@ about:
   home: https://github.com/DamCB/tyssue
   license: GPLv3.0
   license_file: LICENSE
-  summary: 'A tissue simulation library'
+  summary: A tissue simulation library
   description: |
     tyssue provides data structures and algorithms to model epithelium
     in 2D and 3D for python 3.6+
