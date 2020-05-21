@@ -30,6 +30,7 @@ requirements:
     - notebook
     - quantities
     - ipyvolume
+    - vispy
 test:
   imports:
     - tyssue
