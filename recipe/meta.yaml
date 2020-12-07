@@ -10,18 +10,16 @@ source:
   - fn: {{ name }}-{{ version }}.tar.gz
     url: https://github.com/DamCB/tyssue/archive/v{{ version }}.tar.gz
     sha256: {{ sha256 }}
-  - fn: pybind11-2.4.3.tar.gz
-    url: https://github.com/pybind/pybind11/archive/v2.4.3.tar.gz
+  - fn: pybind11-2.6.1.tar.gz
+    url: https://github.com/pybind/pybind11/archive/v2.6.1.tar.gz
     folder: pybind11
-    sha256: 1eed57bc6863190e35637290f97a20c81cfe4d9090ac0a24f3bbf08f265eb71d
-  - url: https://github.com/CGAL/cgal/releases/download/releases%2FCGAL-5.0/CGAL-5.0.zip
-    folder: CGAL
-    sha256: bd9327be903ab7ee379a8a7a0609eba0962f5078d2497cf8e13e8e1598584154
+    sha256: cdbe326d357f18b83d10322ba202d69f11b2f49e2d87ade0dc2be0c5c34f8e2a
 
 build:
-  number: 1
+  number: 4
   skip: true  # [py2k or py35]
   skip: true  # [win and vc<14]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -31,6 +29,7 @@ requirements:
     - {{ compiler('cxx') }}
     - boost-cpp
     - mpfr
+    - cgal
     - jom  # [win]
   host:
     - python
@@ -39,6 +38,7 @@ requirements:
   run:
     - boost-cpp
     - mpfr
+    - cgal
     - python
     - numpy
     - scipy
