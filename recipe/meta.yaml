@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "0.7.0" %}
-{% set sha256 = "78afecb875abdde9f8fb4b499d6eb0433c852509bb5559c17bdc32abd4207ce9" %}
+{% set version = "0.7.1" %}
+{% set sha256 = "cfd8383bb92414e81065652516d13136f099789d830edc3056e92e4b8a79bb95" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   - fn: {{ name }}-{{ version }}.tar.gz
-    url: https://github.com/DamCB/tyssue/archive/{{ version }}.tar.gz
+    url: https://github.com/DamCB/tyssue/archive/v{{ version }}.tar.gz
     sha256: {{ sha256 }}
   - fn: pybind11-2.4.3.tar.gz
     url: https://github.com/pybind/pybind11/archive/v2.4.3.tar.gz
@@ -19,7 +19,7 @@ source:
     sha256: bd9327be903ab7ee379a8a7a0609eba0962f5078d2497cf8e13e8e1598584154
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k or py35]
   skip: true  # [win and vc<14]
 
@@ -31,6 +31,7 @@ requirements:
     - {{ compiler('cxx') }}
     - boost-cpp
     - mpfr
+    - jom  # [win]
   host:
     - python
     - setuptools
@@ -48,6 +49,7 @@ requirements:
     - notebook
     - quantities
     - ipyvolume
+    - vispy
 test:
   imports:
     - tyssue
@@ -68,9 +70,9 @@ test:
 
 about:
   home: https://github.com/DamCB/tyssue
-  license: GPLv3.0
+  license: GPL-3.0-or-later
   license_file: LICENSE
-  summary: 'A tissue simulation library'
+  summary: A tissue simulation library
   description: |
     tyssue provides data structures and algorithms to model epithelium
     in 2D and 3D for python 3.6+

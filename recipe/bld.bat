@@ -5,9 +5,9 @@ cd CGAL
 mkdir build && cd build
 
 set CMAKE_CONFIG="Release"
-set CMAKE_GENERATOR="NMake Makefiles"
+set CMAKE_GENERATOR="NMake Makefiles JOM"
 
-cmake -LAH -G %CMAKE_GENERATOR%  -A x64       ^
+cmake -LAH -G %CMAKE_GENERATOR%               ^
   -DCMAKE_BUILD_TYPE="%CMAKE_CONFIG%"         ^
   -DCMAKE_PREFIX_PATH="%LIBRARY_PREFIX%"      ^
   -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%"   ^
