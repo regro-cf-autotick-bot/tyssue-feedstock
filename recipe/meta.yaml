@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "4f21674f8f800a152737ded41e21f3e0b820556891f78925e9bddb0c578c3021" %}
+{% set version = "0.8.1" %}
+{% set sha256 = "d49822a40a09d9e0126fb5006842b57e3fa59a7d8ca9844f90a44d538c5d2cc3" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ source:
     sha256: cdbe326d357f18b83d10322ba202d69f11b2f49e2d87ade0dc2be0c5c34f8e2a
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k or py35]
   skip: true  # [win and vc<14]
   script: {{ PYTHON }} -m pip install . -vv
@@ -24,10 +24,8 @@ build:
 requirements:
   build:
     - cmake
-    - eigen
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - boost-cpp
     - mpfr
     - cgal
     - jom  # [win]
@@ -36,9 +34,6 @@ requirements:
     - setuptools
     - pip
   run:
-    - boost-cpp
-    - mpfr
-    - cgal
     - python
     - numpy
     - scipy
